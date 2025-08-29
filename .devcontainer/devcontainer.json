@@ -23,6 +23,8 @@
   // Update welcome text and set terminal prompt to '$ '
   "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc",
   // Pull all branches
-  "postAttachCommand": "git pull --all"
+  "postAttachCommand": "git pull --all",
+  // Copy .env.template to .env and set the GitHub token from Codespaces automatically
+  "postCreateCommand": "cp .env.template .env && echo VITE_GITHUB_TOKEN=$GITHUB_TOKEN >> .env"
 }
 // DevContainer Reference: https://code.visualstudio.com/docs/remote/devcontainerjson-reference
