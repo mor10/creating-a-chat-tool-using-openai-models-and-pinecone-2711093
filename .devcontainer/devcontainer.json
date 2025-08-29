@@ -25,6 +25,6 @@
   // Pull all branches
   "postAttachCommand": "git pull --all",
   // Copy .env.template to .env and set the GitHub token from Codespaces automatically
-  "postCreateCommand": "cp .env.template .env && echo VITE_GITHUB_TOKEN=$GITHUB_TOKEN >> .env"
+  "postCreateCommand": "cp .env.template .env && echo VITE_GITHUB_TOKEN=$GITHUB_TOKEN >> .env && npm install"
 }
 // DevContainer Reference: https://code.visualstudio.com/docs/remote/devcontainerjson-reference
